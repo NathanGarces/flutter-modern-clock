@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modern_clock/widgets/clock/clock_centre_circle.dart';
 import 'package:flutter_modern_clock/widgets/clock/clock_face.dart';
+import 'package:flutter_modern_clock/widgets/clock/clock_hands.dart';
 
 class Clock extends StatelessWidget {
   final double size;
@@ -22,6 +23,12 @@ class Clock extends StatelessWidget {
           Align(
             alignment: Alignment.center,
             child: ClockCentreCircle(),
+          ),
+          Align(
+            alignment: Alignment.center,
+            child: ClockHands(
+              time: DateTime.now(),
+            ),
           ),
         ],
       ),
