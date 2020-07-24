@@ -25,7 +25,7 @@ class ClockAndBackground extends ViewModelWidget<MainViewModel> {
                 text: viewModel.time,
                 fontSize:
                     (viewModel.hour % 12 <= 11.0 && viewModel.hour % 12 != 0)
-                        ? 290
+                        ? 280
                         : 310,
                 topPosition: 0,
                 leftPosition: 30,
@@ -34,7 +34,7 @@ class ClockAndBackground extends ViewModelWidget<MainViewModel> {
               top: 300,
               left: 500,
               child: BackgroundText(
-                text: "AM",
+                text: viewModel.period,
                 fontSize: 260,
                 topPosition: 300,
                 leftPosition: 500,

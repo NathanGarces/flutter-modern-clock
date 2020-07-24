@@ -1,15 +1,18 @@
+import 'package:flutter_modern_clock/app/locator.dart';
+import 'package:flutter_modern_clock/services/clock_service.dart';
 import 'package:stacked/stacked.dart';
 
-class MainViewModel extends BaseViewModel {
-  //View Variables
-  double _second = DateTime.now().second as double;
-  double _minute = DateTime.now().minute as double;
-  double _hour = 10.0;
-  String _time = "10:00";
+class MainViewModel extends ReactiveViewModel {
+  //Services Used
+  final ClockService _clockService = locator<ClockService>();
 
   //Getters
-  double get second => _second;
-  double get minute => _minute;
-  double get hour => _hour;
-  String get time => _time;
+  double get second => _clockService.second;
+  double get minute => _clockService.minute;
+  double get hour => _clockService.hour;
+  String get time => _clockService.timeString;
+  String get period => _clockService.timePeriod;
+
+  @override
+  List<ReactiveServiceMixin> get reactiveServices => [_clockService];
 }
