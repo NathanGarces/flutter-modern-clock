@@ -5,15 +5,23 @@ import 'package:flutter_modern_clock/widgets/clock/clock_hands.dart';
 
 class Clock extends StatelessWidget {
   final double size;
+  final double second;
+  final double minute;
+  final double hour;
 
-  const Clock({Key key, this.size = 400}) : super(key: key);
+  const Clock(
+      {Key key,
+      this.size = 400,
+      @required this.second,
+      @required this.minute,
+      @required this.hour})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: size,
       width: size,
-      color: Colors.red,
       child: Stack(
         children: [
           Align(
@@ -27,7 +35,9 @@ class Clock extends StatelessWidget {
           Align(
             alignment: Alignment.center,
             child: ClockHands(
-              time: DateTime.now(),
+              second: second,
+              minute: minute,
+              hour: hour,
             ),
           ),
         ],

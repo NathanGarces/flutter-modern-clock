@@ -3,20 +3,23 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 class ClockHands extends StatelessWidget {
-  final DateTime time;
+  final double second;
+  final double minute;
+  final double hour;
   final Color minuteAndHourHandColor;
 
   const ClockHands(
       {Key key,
-      @required this.time,
-      this.minuteAndHourHandColor = const Color(0xFFB692FF)})
+      this.minuteAndHourHandColor = const Color(0xFFB692FF),
+      @required this.second,
+      @required this.minute,
+      @required this.hour})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return CustomPaint(
-      painter: _ClockHandsPainter(time.second as double, time.minute as double,
-          time.hour as double, minuteAndHourHandColor),
+      painter: _ClockHandsPainter(second, minute, hour, minuteAndHourHandColor),
       size: Size(400, 400),
     );
   }

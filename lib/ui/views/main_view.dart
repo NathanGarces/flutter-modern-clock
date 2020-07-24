@@ -6,7 +6,7 @@ import 'package:stacked/stacked.dart';
 import 'package:flutter_modern_clock/ui/viewmodels/main_viewmodel.dart';
 
 //Widget Imports
-import 'package:flutter_modern_clock/widgets/clock/clock.dart';
+import 'package:flutter_modern_clock/widgets/clock_and_background.dart';
 
 class MainView extends StatelessWidget {
   const MainView({Key key}) : super(key: key);
@@ -24,7 +24,7 @@ class MainView extends StatelessWidget {
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [Clock()],
+                    children: [ClockAndBackground()],
                   )),
             ),
         viewModelBuilder: () => MainViewModel());
