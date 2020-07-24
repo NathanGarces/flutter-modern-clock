@@ -4,6 +4,7 @@ import 'package:flutter_modern_clock/app/router.gr.dart';
 import 'package:stacked_services/stacked_services.dart';
 
 void main() {
+  setupLocator();
   runApp(MyApp());
 }
 
@@ -15,7 +16,6 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Scaffold(),
       onGenerateRoute: Router().onGenerateRoute,
       navigatorKey: locator<NavigationService>().navigatorKey,
     );
