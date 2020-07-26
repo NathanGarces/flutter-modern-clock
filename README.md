@@ -1,6 +1,6 @@
 # flutter_modern_clock
 
-The clock is a modern analog and digital clock, which was designed for a 900x600 smart clock.
+The clock is a modern analogue and digital clock, which was designed for a 900x600 smart clock.
 
 The clock was designed using Figma and implemented in Flutter.
 
