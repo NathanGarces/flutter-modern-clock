@@ -14,3 +14,6 @@ There are 4 layers to the clock:
 - clock_centre_circle.dart, which is the centre circle of the clock and a shadow underneath.
 - clock_face.dart, which is the main "ring" or clock face.
 - clock_hands.dart, which is the 3 hands of the clock and contains all of the main positional calculations.
+
+## DISCLAIMER
+The clock has been developed and tested for use in a chrome browser. There may be errors on other devices.
